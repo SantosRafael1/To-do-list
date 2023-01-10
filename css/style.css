@@ -1,0 +1,35 @@
+.items{
+    list-style: none;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    margin: 0 auto;
+    width: 400px;
+}
+
+#container-list li{
+    text-align: center;
+}
+
+.field{
+    width: 200px;
+    height: 60px;
+    outline: none;
+    border: none;
+    background-color: #f0f8ff;
+    border-radius: 5%;
+    text-align: center;
+}
+
+.button{
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 5%;
+}
+
+.button:hover{
+    border: 1px solid black;
+}
