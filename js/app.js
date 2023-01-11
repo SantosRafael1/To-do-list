@@ -11,4 +11,5 @@ document.querySelector('form').addEventListener("submit", function(e) {
     });
 
     document.querySelector("ul").appendChild(createLi);
+    document.querySelector("input[type='text']").value = "";
 });
