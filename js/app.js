@@ -1,21 +1,14 @@
-let taskList = []
-
-let form = document.getElementById("form");
-form.addEventListener("submit", (e) => {
+document.querySelector('form').addEventListener("submit", function(e) {
     e.preventDefault();
 
-    let valueEntered = document.getElementById("input-field");
-    let task = valueEntered.value;
-    taskList.push(task);
-    document.getElementById("input-field").value = "";
+    let task = document.querySelector("input[type='text']").value;
 
-    renderTodos();
+    let createLi = document.createElement("li");
+    createLi.innerText = task;
+
+    createLi.addEventListener("click", function() {
+        this.remove();
+    });
+
+    document.querySelector("ul").appendChild(createLi);
 });
-
-function renderTodos() {
-    let containerList = document.getElementById("container-list");
-    containerList.innerHTML = "";
-    for (let i = 0; i < taskList.length; i++) {
-        containerList.innerHTML += `<li class='items'>${taskList[i]}</li>`;
-    }
-}
