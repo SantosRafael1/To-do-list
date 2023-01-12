@@ -13,3 +13,8 @@ document.querySelector('form').addEventListener("submit", function(e) {
     document.querySelector("ul").appendChild(createLi);
     document.querySelector("input[type='text']").value = "";
 });
+
+window.addEventListener('beforeunload', function (event) {
+    event.preventDefault();
+    event.returnValue = "Are you sure you want to leave this page?";
+});
